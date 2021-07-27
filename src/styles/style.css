@@ -1,0 +1,420 @@
+    * {
+        padding: 1px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(222, 248, 163);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    /*
+  AppBar
+*/
+    
+    .app-bar {
+        padding: 8px 16px;
+        background-color: yellowgreen;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        box-shadow: 0 2px 4px 0 rgba(113, 241, 38, 0.2);
+        border-radius: 2px;
+    }
+    
+    .app-bar .app-bar__menu {
+        display: flex;
+        align-items: center;
+    }
+    
+    .app-bar .app-bar__menu button {
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        padding: 8px;
+        cursor: pointer;
+        min-height: 44px;
+        min-width: 44px;
+    }
+    /*
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+
+
+.nav-item a {
+    color: rgb(13, 14, 11);
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 0.9em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    margin-left: 2px;
+}
+*/
+    
+    .nav-item a:hover {
+        background-color: #0bf317;
+    }
+    
+    button#hamburgerButton:hover {
+        background-color: #0bf317;
+    }
+    
+    button#hamburgerButton {
+        display: inline-block;
+        min-width: 44px;
+        min-height: 44px;
+        line-height: 44px;
+    }
+    
+    .app-bar .app-bar__brand {
+        display: flex;
+        align-items: center;
+    }
+    
+    .app-bar .app-bar__brand h1 {
+        color: #4b07c9;
+        text-transform: uppercase;
+        font-size: 22px;
+        user-select: none;
+    }
+    
+    .app-bar .app-bar__navigation {
+        position: absolute;
+        top: 50px;
+        left: -180px;
+        width: 150px;
+        transition: all 0.3s;
+        padding: 8px;
+        overflow: hidden;
+    }
+    
+    .app-bar .app-bar__navigation.open {
+        left: 0;
+        background-color: yellowgreen;
+    }
+    
+    .app-bar .app-bar__navigation ul li a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        padding: 8px;
+        margin-bottom: 5px;
+        width: 100%;
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    hero-div {
+        display: flex;
+        align-items: center;
+        min-height: 450px;
+        width: 100%;
+        background: linear-gradient(rgba(6, 150, 54, 0.7), rgba(0, 0, 0, 0.6)), url("heros/hero-image_1-small.jpg");
+        text-align: center;
+        background-size: cover;
+        background-position: top;
+    }
+    
+    .hero__inner {
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    
+    .hero__title {
+        color: #fff;
+        font-weight: 500;
+        font-size: 36px;
+    }
+    
+    .hero__tagline {
+        color: #fff;
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    /*
+  Main Content
+*/
+    
+    main {
+        flex: 1;
+    }
+    
+    a {
+        display: inline-block;
+        min-width: 44px;
+        min-height: 44px;
+        line-height: 44px;
+    }
+    
+    .content {
+        padding: 32px;
+        margin: 0 auto;
+        min-height: 100%;
+    }
+    
+    .content .content__heading {
+        font-weight: normal;
+    }
+    
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background-color: transparent;
+        color: brown;
+        padding: 8px;
+        z-index: 100;
+        text-decoration: none;
+    }
+    
+    .skip-link:focus {
+        top: 0;
+    }
+    
+    a {
+        min-width: 44px;
+        min-height: 44px;
+        line-height: 44px;
+    }
+    
+    a:hover {
+        background-color: #0bf317;
+    }
+    /*
+  restaurants
+*/
+    
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin: 32px 0;
+    }
+    
+    .restaurant__empty__label {
+        font-size: 20px;
+        color: red;
+    }
+    /*
+  restaurant Item
+*/
+    
+    .restaurant-item {
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .restaurant-item__header {
+        position: relative;
+    }
+    
+    .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+        width: 100%;
+        min-height: 250px;
+    }
+    
+    .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+        position: absolute;
+        padding: 8px;
+        bottom: 20px;
+        left: 0;
+        display: inline-block;
+        background-color: black;
+        color: white;
+    }
+    
+    .restaurant-item .restaurant-item__header .restaurant-item__header__rating .restaurant-item__header__rating__score {
+        margin-left: 10px;
+    }
+    
+    .restaurant-item .restaurant-item__content {
+        padding: 16px;
+    }
+    
+    .restaurant-item .restaurant-item__content h3 {
+        margin: 0 0 10px 0;
+    }
+    
+    .restaurant-item .restaurant-item__content h3 a {
+        color: #033d12;
+        text-decoration: none;
+    }
+    
+    .restaurant-item .restaurant-item__content p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+    
+    .category-name {
+        background: #055024;
+        border-radius: 8px;
+        display: inline-block;
+        padding: 8px 16px 8px 16px;
+        color: white;
+        text-align: center;
+        margin-right: 6px;
+    }
+    
+    .menus-name {
+        background: #534321;
+        border-radius: 8px;
+        display: inline-block;
+        padding: 8px;
+        margin-top: 8px;
+        color: white;
+        text-align: center;
+        margin-right: 6px;
+    }
+    /*
+  restaurant
+*/
+    
+    .restaurant {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px 16px;
+        margin-top: 32px;
+    }
+    
+    .restaurant .restaurant__poster {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .restaurant .restaurant__info h4 {
+        margin: 8px 0;
+    }
+    
+    .restaurant__reviews h3 {
+        margin-top: 32px;
+    }
+    
+    .card-comment {
+        text-align: left;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        width: 90%;
+        margin-top: 16px;
+        padding: 16px 32px 16px 32px;
+        overflow: hidden;
+    }
+    
+    .card-comment .date {
+        color: gray;
+        font-size: 14px;
+    }
+    /*
+  Footer
+*/
+    
+    footer {
+        padding: 16px;
+        color: #035f22;
+        text-decoration: none;
+    }
+    
+    footer p {
+        text-align: center;
+    }
+    
+    .like {
+        font-size: 18px;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background-color: #db0000;
+        color: whitesmoke;
+        border: 0;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #e75b10;
+        border-radius: 80%;
+        margin: auto;
+        width: 120px;
+        height: 120px;
+        animation: spin 5s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    * Error Message */ error-message,
+    favorite-message,
+    not-found,
+    lost-network {
+        width: 80%;
+        margin: auto;
+        height: 300px;
+        padding: 20px;
+        text-align: center;
+        display: block;
+        background-color: white;
+    }
+    
+    error-message h1,
+    favorite-message h1,
+    not-found h1,
+    lost-network h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: #e75b10;
+        font-size: 24px;
+    }
+    
+    error-message p,
+    favorite-message p,
+    not-found p,
+    lost-network p {
+        font-family: 'Lato', sans-serif;
+        color: #e75b10;
+        font-size: 18px;
+    }
+    
+    error-message img,
+    favorite-message img,
+    not-found img,
+    lost-network img {
+        width: 250px;
+    }
